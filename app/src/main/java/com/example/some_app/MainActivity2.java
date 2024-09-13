@@ -9,8 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
-
-
+        // 0.1 starts here
 
         // Variables to hold the values
         private TextView display;

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textAlignment="center"
+            android:textSize="50sp"
+            android:layout_marginStart="35dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/mtf_epic"
+            android:layout_marginTop="30dp"/>
+
+        <!-- First Name -->
+        <TextView
+            android:id="@+id/labelFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/inputFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter First Name"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Middle Name -->
+        <TextView
+            android:id="@+id/labelMiddleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Middle Name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/inputMiddleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Middle Name"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Last Name -->
+        <TextView
+            android:id="@+id/labelLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/inputLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Last Name"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="10dp"/>
+
+
+        <!-- Gender(Radio Button) -->
+        <TextView
+            android:id="@+id/labelGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioGenderMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"/>
+
+            <RadioButton
+                android:id="@+id/radioGenderFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"/>
+            <RadioButton
+                android:id="@+id/radioGenderOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"/>
+        </RadioGroup>
+
+        <!-- Number -->
+        <TextView
+            android:id="@+id/labelNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/inputNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Number"
+            android:inputType="number"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/labelEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Country Dropdown -->
+        <TextView
+            android:id="@+id/labelCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/country_array"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Working/Not Working Radio Buttons -->
+        <TextView
+            android:id="@+id/labelWorking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you currently working?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupWorking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioWorkingYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Working"/>
+
+            <RadioButton
+                android:id="@+id/radioWorkingNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Working"/>
+        </RadioGroup>
+
+        <!-- Language Checkbox -->
+        <TextView
+            android:id="@+id/labelLanguages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Languages You Know"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <CheckBox
+            android:id="@+id/checkboxEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English"/>
+
+        <CheckBox
+            android:id="@+id/checkboxSpanish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spanish"/>
+
+        <CheckBox
+            android:id="@+id/checkboxFrench"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="French"/>
+
+        <CheckBox
+            android:id="@+id/checkboxGerman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="German"/>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+</ScrollView>

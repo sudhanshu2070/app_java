@@ -1,0 +1,10 @@
+<resources>
+<style name="scheduleListView">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:background">@color/bg_color_white</item>
+    <item name="android:cacheColorHint">@android:color/transparent</item>
+    <item name="android:scrollingCache">false</item>
+    <item name="android:visibility">visible</item>
+</style>
+</resources>

@@ -1,3 +1,20 @@
 <resources>
+    <!-- Application Name -->
+
     <string name="app_name">some_app_1</string>
+
+    <!-- Country List -->
+    <string-array name="country_array">
+        <item>India</item>
+        <item>Mexico</item>
+        <item>Russia</item>
+        <item>United States</item>
+        <item>Canada</item>
+        <item>United Kingdom</item>
+        <item>Australia</item>
+    </string-array>
+
+    <!--    Form Name-->
+    <string name="register">Registration Form</string>
+
 </resources>

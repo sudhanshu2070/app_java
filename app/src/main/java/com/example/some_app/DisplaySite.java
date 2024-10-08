@@ -8,9 +8,11 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.some_app.modal.BeanSiteList;
+import com.example.some_app.util.SiteAdapter;
 import com.example.some_app.util.Utils;
 import com.google.gson.Gson;
 
@@ -19,18 +21,18 @@ import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class DisplaySite extends Activity {
 
     BeanSiteList response_ticket_list = null;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_site);
+        listView = findViewById(R.id.listView_sch_sites);
 
 
         if (Utils.isNetworkAvailable(DisplaySite.this)) {
@@ -90,7 +92,8 @@ public class DisplaySite extends Activity {
                 Toast.makeText(DisplaySite.this,"server error",Toast.LENGTH_LONG).show();
             } else if (response_ticket_list.getSite_list()!=null && response_ticket_list.getSite_list().size() > 0) {
 
-               //sites_list.setAdapter(new AdapterSchedule(getActivity(),response_ticket_list,"S"));
+                SiteAdapter adapter = new SiteAdapter(DisplaySite.this, response_ticket_list.getSite_list());
+                listView.setAdapter(adapter);
 
             } else {
                 Toast.makeText(DisplaySite.this,"No data found",Toast.LENGTH_LONG).show();

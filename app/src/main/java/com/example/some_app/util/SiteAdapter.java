@@ -33,10 +33,10 @@ public class SiteAdapter extends ArrayAdapter<BeansSiteView> {
         BeansSiteView site = getItem(position);
 
         // Populate the data into the template view
-        TextView tvPmTktId = convertView.findViewById(R.id.tvPmTktId);
-        TextView tvSidName = convertView.findViewById(R.id.tvSidName);
-        TextView status = convertView.findViewById(R.id.status);
-        TextView crdDt = convertView.findViewById(R.id.crdDt);
+        TextView tvPmTktId = convertView.findViewById(R.id.tvPmTktIdValue);
+        TextView tvSidName = convertView.findViewById(R.id.tvSidNameValue);
+        TextView status = convertView.findViewById(R.id.statusValue);
+        TextView crdDt = convertView.findViewById(R.id.crdDtValue);
 
         tvPmTktId.setText(site.getPmTktId());
         tvSidName.setText(site.getSidName());
